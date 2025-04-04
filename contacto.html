@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Casa Artesanal Mexicana</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* === Estilos para la página de contacto === */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d9534f;
+            padding: 20px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        header .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .pagina-contacto {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .pagina-contacto h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .pagina-contacto p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            color: #555;
+        }
+
+        .contacto-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .formulario-contacto {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 350px;
+            max-width: 500px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .formulario-contacto h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .formulario-contacto form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .formulario-contacto label {
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .formulario-contacto input,
+        .formulario-contacto textarea {
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .formulario-contacto input:focus,
+        .formulario-contacto textarea:focus {
+            border-color: #d9534f;
+            outline: none;
+        }
+
+        .formulario-contacto button {
+            padding: 15px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .formulario-contacto button:hover {
+            background-color: #c9302c;
+        }
+
+        .mapa-contacto {
+            flex: 1;
+            min-width: 350px;
+            max-width: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+            border: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        /* Animación fadeIn */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contacto-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .formulario-contacto,
+            .mapa-contacto {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/Logo.png" alt="Logo ARTMEXA">
+                ARTMEXA
+            </div>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="comercio.html">COMERCIO</a></li>
+                <li><a href="historia.html">NUESTRA HISTORIA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-contacto">
+        <h1>Contacto</h1>
+        <p>¿Tienes alguna pregunta o comentario? Contáctanos.</p>
+
+        <div class="contacto-container">
+
+            <!-- FORMULARIO -->
+            <div class="formulario-contacto">
+                <h2>Envíanos un mensaje</h2>
+                <form action="#" method="POST">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <!-- MAPA -->
+            <div class="mapa-contacto">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6110884765054!2d-99.13320808457197!3d19.432607686886297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff36288980c5%3A0x3ef6745e7b229b!2sZ%C3%B3calo%20de%20la%20Ciudad%20de%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1710717825123!5m2!1ses!2smx"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Casa Artesanal Mexicana - ARTMEXA. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
