@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: url('images/img1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Fondo oscuro con transparencia */
+.contenedor-formulario {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Títulos */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff7f50; /* Changed from #d9534f to coral */
+    font-family: 'Georgia', serif;
+}
+
+/* Inputs y Select */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Botón rojo para registro */
+.btn-rojo {
+    background: #ff7f50; /* Changed from #d9534f to coral */
+    color: white;
+}
+
+.btn-rojo:hover {
+    background: #ff6347; /* Slightly darker coral for hover */
+}
+
+/* Botón azul para iniciar sesión */
+.btn-azul {
+    background: #5bc0de;
+    color: white;
+}
+
+.btn-azul:hover {
+    background: #31b0d5;
+}
+
+/* Links */
+a {
+    color: #5bc0de;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+}
+
+a:hover {
+    color: #31b0d5;
+    text-decoration: underline;
+}
