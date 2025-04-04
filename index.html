@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casa Artesanal Mexicana - Tienda en línea de artesanías mexicanas auténticas.">
+    <title>Casa Artesanal Mexicana</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/Logo.png" alt="Logo Casa Artesanal Mexicana">
+                <span>ARTMEXA</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="comercio.html">COMERCIO</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="exportaciones.html">EXPORTACIONES</a></li>
+            </ul>
+            <div class="auth-buttons"></div>
+            <div class="carrito-boton">
+                <button id="ver-carrito" class="btn-carrito">
+                    <span class="contador-carrito">0</span>
+                    Productos
+                </button>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Donde la tradición y la artesanía se encuentran</h1>
+                <p>Descubre la autenticidad de las artesanías mexicanas.</p>
+                <a href="comercio.html" class="btn">Ver artesanías</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="bienvenida" class="bienvenida">
+            <div class="contenido">
+                <h2>Bienvenido a Casa ARTMEXA</h2>
+                <p>Descubre la belleza y la autenticidad de las artesanías mexicanas en nuestra tienda en línea. Cada pieza cuenta una historia única y representa la rica cultura de México.</p>
+                <img src="images/Logo.png" alt="Icono de artesanía">
+            </div>
+        </section>
+
+        <section id="mas-vendidos" class="productos-destacados">
+            <h2>Los más vendidos</h2>
+            <div class="productos">
+                <article class="producto" data-id="1" data-nombre="Textiles de Oaxaca" data-precio="500">
+                    <img src="images/Textil.png" alt="Textiles de Oaxaca">
+                    <h3>Textiles de Oaxaca</h3>
+                    <p>Precio: $500 MXN</p>
+                    <button class="btn agregar-carrito">Agregar al carrito</button>
+                </article>
+                <article class="producto" data-id="2" data-nombre="Cerámica de Talavera" data-precio="800">
+                    <img src="images/ProductoCeramica.png" alt="Cerámica de Talavera">
+                    <h3>Cerámica de Talavera</h3>
+                    <p>Precio: $800 MXN</p>
+                    <button class="btn agregar-carrito">Agregar al carrito</button>
+                </article>
+            </div>
+            <a href="comercio.html" class="btn">Explorar más</a>
+        </section>
+    </main>
+
+    <aside id="carrito" class="carrito">
+        <h3>Carrito de Compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span> MXN</p>
+        <button id="vaciar-carrito" class="btn">Vaciar Carrito</button>
+        <button id="pagar-carrito" class="btn">Pagar Ahora</button>
+
+        <div id="formulario-pago" style="display: none;">
+            <h3>Finalizar compra</h3>
+            <form id="form-pago">
+                <div class="grupo-form">
+                    <label for="numero-tarjeta">Número de tarjeta</label>
+                    <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" required>
+                </div>
+                
+                <div class="grupo-form doble">
+                    <div>
+                        <label for="fecha-expiracion">Expiración</label>
+                        <input type="month" id="fecha-expiracion" required>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Pagar $<span id="total-pago">0</span> MXN</button>
+            </form>
+            
+            <div class="medios-pago">
+                <img src="images/visa.png" alt="Visa">
+                <img src="images/mastercard.png" alt="Mastercard">
+                <img src="images/amex.png" alt="American Express">
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="footer-contenido">
+            <p>&copy; 2025 ARTMEXA. Todos los derechos reservados.</p>
+            <div class="redes-sociales">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/X.png" alt="X"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
