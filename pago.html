@@ -1,0 +1,36 @@
+<aside id="carrito" class="carrito">
+    <h3>Carrito de Compras</h3>
+    <ul id="lista-carrito"></ul>
+    <p>Total: $<span id="total">0</span> MXN</p>
+    <button id="vaciar-carrito" class="btn">Vaciar Carrito</button>
+    <button id="pagar-carrito" class="btn">Pagar Ahora</button>
+
+    <div id="formulario-pago" style="display: none;">
+        <h3>Finalizar compra</h3>
+        <form id="form-pago">
+            <div class="grupo-form">
+                <label for="numero-tarjeta">Número de tarjeta</label>
+                <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456" required>
+            </div>
+            
+            <div class="grupo-form doble">
+                <div>
+                    <label for="fecha-expiracion">Expiración</label>
+                    <input type="month" id="fecha-expiracion" required>
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">Pagar $<span id="total-pago">0</span> MXN</button>
+        </form>
+        
+        <div class="medios-pago">
+            <img src="images/visa.png" alt="Visa">
+            <img src="images/mastercard.png" alt="Mastercard">
+            <img src="images/amex.png" alt="American Express">
+        </div>
+    </div>
+</aside>
