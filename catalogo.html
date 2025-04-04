@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Vendedor - ARTMEXA</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/Logo.png" alt="Logo ARTMEXA">
+                <span>ARTMEXA</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="comercio.html">COMERCIO</a></li>
+                <li><a href="catalogo.html">MI CATÁLOGO</a></li>
+            </ul>
+            <div class="auth-buttons"></div>
+        </nav>
+    </header>
+
+    <main class="catalogo-container">
+        <h1>Administrar Mi Catálogo</h1>
+        
+        <section class="agregar-producto">
+            <h2>Agregar Nuevo Producto</h2>
+            <form id="form-producto">
+                <div class="form-group">
+                    <label for="nombre-producto">Nombre del Producto</label>
+                    <input type="text" id="nombre-producto" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio (MXN)</label>
+                    <input type="number" id="precio" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen (URL)</label>
+                    <input type="text" id="imagen" placeholder="https://ejemplo.com/imagen.jpg">
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" required>
+                        <option value="textiles">Textiles</option>
+                        <option value="ceramica">Cerámica</option>
+                        <option value="joyeria">Joyeria</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Agregar Producto</button>
+            </form>
+        </section>
+
+        <section class="mis-productos">
+            <h2>Mis Productos</h2>
+            <div id="lista-productos" class="productos-grid">
+                <!-- Productos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <script src="catalogo.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
